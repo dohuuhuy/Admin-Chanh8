@@ -1,0 +1,75 @@
+<ul class="navbar-nav sidebar sidebar-dark accordion accordionSidebar" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a style="height: auto" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <img class="img-fluid logo-chanh" src="./img/Chanh-logo.png" />
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0" />
+
+    <!-- Divider -->
+    <hr class="sidebar-divider" />
+
+    <!-- Nav Item - Pages Collapse Menu -->
+
+    <li class="nav-item text-center create-order">
+        <a href="/tao-don-hang.html" class="nav-link text-center text-uppercase font-weight-bold text-light">
+            <span class="">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span class="text">Tạo đơn hàng</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/theo-doi.html">
+            <i class="fas fa-search"></i>
+            <span>Theo Dõi</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/lich-su-don-hang.html">
+            <i class="fas fa-history"></i>
+            <span>Lịch sử đơn hàng</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/vi.html">
+            <i class="fas fa-wallet"></i>
+            <span>Ví</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="collapse" data-target="#setting" aria-expanded="true"
+            aria-controls="setting">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Cài đặt</span>
+        </a>
+        <div id="setting" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+                <a class="collapse-item" href="/cai-dat-tai-khoan.html">Cài đặt tài khoản</a>
+                <a class="collapse-item" href="/dia-chi.html">Địa chỉ của tôi</a>
+                <a class="collapse-item" href="/thong-bao.html">Thông báo</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block" />
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+</ul>
+
+<style class="style"></style>
+
+<script src="./js/admin.js"></script>
+<script src="./js/admin.min.js"></script>
+<script>
+    $(() => $(".style").load("./component/Organisms/Sidebar/style.module.css"))
+</script>

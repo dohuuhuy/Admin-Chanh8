@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Cài đặt</a></li>
+            <li class="breadcrumb-item">
+                <a href="#" id="cate">Cài đặt địa chỉ</a>
+            </li>
+            <!-- <li class="breadcrumb-item active" aria-current="page">Data</li> -->
+        </ol>
+    </nav>
+</div>
+
+
+<script>
+
+    var listBreadcrumb = [
+        {
+            id: 'tao-don-hang',
+            name: 'Tạo đơn hàng'
+        },
+        {
+            id: 'vi',
+            name: 'Ví'
+        },
+        {
+            id: 'theo-doi',
+            name: 'Theo dõi đơn hàng'
+        },
+        {
+            id: 'lich-su-don-hang',
+            name: 'Lịch sử đơn hàng'
+        },
+        {
+            id: 'thong-bao',
+            name: 'Cài đặt thông báo'
+        },
+        {
+            id: 'dia-chi',
+            name: 'Cài đặt địa chỉ'
+        },
+        {
+            id: 'cai-dat-tai-khoan',
+            name: 'Cài đặt tài khoản'
+        }
+    ]
+
+    var path = window.location.pathname;
+    var page = path.split("/").pop().split(".html");
+    listBreadcrumb.map(({ id, name }) => {
+        if (id === page[0]) {
+            document.getElementById('cate').innerHTML = name
+        }
+    })
+</script>

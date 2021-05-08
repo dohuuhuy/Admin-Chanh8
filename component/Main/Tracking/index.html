@@ -1,0 +1,79 @@
+<section>
+    <div class="card">
+        <div class="card-header">
+            <div class="d-flex justify-content-md-between">
+                <div class="form-group form-inline d-flex align-items-center mb-0">
+                    <h3 class="h3-reponsive mr-2 my-3 text-capitalize">
+                        Bộ lọc tìm kiếm
+                    </h3>
+                    <select class="custom-select form-select mx-3">
+                        <option selected>Ngày Tháng Năm</option>
+                        <option>one</option>
+                        <option>one</option>
+                    </select>
+                    <select class="custom-select form-select">
+                        <option selected>Trạng thái</option>
+                        <option>one</option>
+                        <option>one</option>
+                    </select>
+                </div>
+                <a href=" " class="font-italic text-success border-primary d-flex align-items-center"
+                    data-toggle="modal" data-target="#exampleModalCenter">
+                    Tìm kiếm nâng cao
+                    <i class="fa fa-angle-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+        <div class="card-body">
+            <!-- không có mã vận đơn -->
+            <h4 class="text-center d-none">
+                Bạn chưa có mã vận đơn, vui lòng
+                <button class="btn btn-success btn-sm">Tạo đơn hàng</button>
+            </h4>
+            <!-- danh sách mã vận đơn -->
+            <table class="table table-bordered table-responsive-stack table-hover" id="tableOne">
+                <thead class="thead-dark">
+                    <tr class="text-capitalize">
+                        <th>Mã vận đơn</th>
+                        <th>người nhận</th>
+                        <th>điện thoại</th>
+                        <th>ngày tạo</th>
+                        <th>giao hàng</th>
+                        <th>trạng thái</th>
+                        <th>tiền thu hộ COD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Sweet and Tart</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Sweet and Tart</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<script src="./component/Main/Tracking/script.module.js"></script>
+
+<div id="ModalFilterTracking"></div>
+
+<style class="style"></style>
+
+<script>
+    $(() => $(".style").load("./component/Main/Tracking/style.module.css"));
+    $(() => $("#ModalFilterTracking").load("./component/Molecules/ModalFilterTracking/index.html"))
+</script>

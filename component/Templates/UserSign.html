@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head class="Header"></head>
+
+<body class="bg-gradient-success">
+    <!-- Container -->
+    <div class="container ">
+        <!-- Row -->
+        <div class="row justify-content-center ">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <!-- Card -->
+                <div class="card o-hidden border-0 shadow-lg my-3">
+                    <!-- Main Sign -->
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <!-- Banners Sign -->
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image ">
+                                <div class="BannerLogin"></div>
+                            </div>
+                            <!-- Form Sign -->
+                            <div class="col-lg-6">
+                                <div class="SignIn"></div>
+                            </div>
+                        </div>
+                        <!-- Icon app mobile -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="DownloadApp"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Import component -->
+    <script>
+        $(() => $(".Header").load("./component/Organisms/Header.html"))
+        $(() => $(".BannerLogin").load("./component/Molecules/BannerLogin/index.html"))
+        $(() => $(".SignIn").load("./component/Main/SignUp/index.html"))
+        $(() => $(".DownloadApp").load("./component/Molecules/DownloadApp/index.html"))
+    </script>
+
+</body>
+
+</html>

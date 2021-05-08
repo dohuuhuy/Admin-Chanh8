@@ -1,0 +1,61 @@
+<section>
+    <div class="card shadow">
+        <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Địa chỉ</h6>
+        </div>
+        <!-- Editable table -->
+        <div class="card-body text-center">
+            <div class="table-content">
+                <table class="table table-borded table-responsive table-hover " id="table-list">
+                    <thead class="">
+                        <tr>
+                            <td>Chọn</td>
+                            <td>Người liên hệ</td>
+                            <td>Số điện thoại</td>
+                            <td>Email</td>
+                            <td>Địa chỉ</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <input type="radio" id="test1" name="radio-group" checked>
+                            </td>
+                            <td>Trảng Bàng</td>
+                            <td>0583538872</td>
+                            <td>jhsdfgh@hotmail.com</td>
+                            <td>Phường 12, quận 10, TP.HCM</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <input type="radio" id="test1" name="radio-group" checked>
+                            </td>
+                            <td>Sams</td>
+                            <td>0934834343</td>
+                            <td>hhfdfg@hotmail.com</td>
+                            <td> 29.7/1 bis đường 44, Phường 12, quận 10, TP.HCM</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-info" id="add"> <i class="fas fa-plus"></i>Thêm địa chỉ</button>
+            </div>
+        </div>
+        <!-- Editable table -->
+
+        <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Địa chỉ thanh toán</h6>
+        </div>
+        <!-- Editable table -->
+        <div class="card-body text-center">
+            <p>Sams, 0934834343, 29.7/1 bis đường 44, Phường 12, quận 10, TP.HCM</p>
+        </div>
+    </div>
+</section>
+<div class="ModalAddress"></div>
+
+<script src="js/table.js"></script>
+
+<!-- Import component -->
+<script>
+    $(() => $(".ModalAddress").load("./component/Molecules/ModalAddress/index.html"))
+</script>

@@ -1,0 +1,55 @@
+<section>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="h2-reponsive mr-2 my-3 text-capitalize">Lịch sử mã vận đơn</h3>
+        </div>
+        <div class="card-body">
+            <!-- không có mã vận đơn -->
+            <h4 class="text-center d-none">
+                Bạn chưa có mã vận đơn, vui lòng
+                <button class="btn btn-success btn-sm">Tạo đơn hàng</button>
+            </h4>
+            <!-- danh sách mã vận đơn -->
+            <table class="table table-bordered table-responsive-stack table-hover" id="tableOne">
+                <thead class="thead-dark">
+                    <tr class="text-capitalize">
+                        <th>Mã vận đơn</th>
+                        <th>người nhận</th>
+                        <th>điện thoại</th>
+                        <th>ngày tạo</th>
+                        <th>giao hàng</th>
+                        <th>trạng thái</th>
+                        <th>tiền thu hộ COD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Sweet and Tart</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Apple</td>
+                        <td>Green and Red</td>
+                        <td>Sweet and Tart</td>
+                        <td>Sweet and Tart</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<style class="style"></style>
+
+<script>
+    $(() => $(".style").load("./component/Main/OrderHistory/style.module.css"));
+</script>
+<script src="./component/Main/OrderHistory/script.module.js"></script>

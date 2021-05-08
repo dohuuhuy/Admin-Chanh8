@@ -1,0 +1,64 @@
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style="font-size: 0.875rem">
+            <div class="modal-header">
+                <div class="d-flex justify-content-md-between w-100">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Chọn tất cả
+                        </label>
+                    </div>
+                    <a href=" " class="small font-italic text-warning border-primary d-flex align-items-center"
+                        data-toggle="modal" data-target="#exampleModalCenter">
+                        Đặt lại bộ lộc
+                        <i class=" fa fa-undo ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h6 class="mb-0 font-weight-bold">
+                                <i class="fas fa-box mr-2"></i> Trạng thái chung
+                            </h6>
+                            <hr class="my-1" />
+                            <ul class="list-unstyled" id="listStatus"></ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="mb-0 font-weight-bold">
+                                <i class="fas fa-money-bill-wave mr-2"></i> Tiền giao hàng
+                            </h6>
+                            <hr class="my-1" />
+                            <ul class="list-unstyled" id="listMoney"></ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="mb-0 font-weight-bold">
+                                <i class="fas fa-car-side mr-2"></i> Xe trung chuyển
+                            </h6>
+                            <hr class="my-1" />
+                            <ul class="list-unstyled" id="listCar"></ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="mb-0 font-weight-bold">
+                                <i class="fas fa-globe mr-2"></i> Quốc tế
+                            </h6>
+                            <hr class="my-1" />
+                            <ul class="list-unstyled" id="listInteral"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger small btn-sm" data-dismiss="modal">
+                    Hủy
+                </button>
+                <button type="button" class="btn btn-success small btn-sm">
+                    Áp dụng
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

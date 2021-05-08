@@ -1,0 +1,35 @@
+<h2 class="text-center text-uppercase text-success font-weight-bold m-3" id="cate">
+    Đăng nhập
+</h2>
+<p class="text-center text-dark p-2">
+    Tạo đơn hàng, theo dõi đơn hàng, có quyền truy cập vào báo
+    cáo hàng hóa và nhiều hơn nữa!
+</p>
+
+<script>
+
+    var listBreadcrumb = [
+        {
+            id: 'dang-ky',
+            name: 'Đăng ký'
+        },
+        {
+            id: 'dang-nhap',
+            name: 'Đăng nhâp'
+        },
+        {
+            id: 'quen-mat-khau',
+            name: 'Quên mật khẩu'
+        }
+    ]
+
+    var path = window.location.pathname;
+    var page = path.split("/").pop().split(".html");
+
+    listBreadcrumb.map(({ id, name }) => {
+        if (id === page[0]) {
+            document.getElementById('cate').innerHTML = name
+        }
+    })
+
+</script>
