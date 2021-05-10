@@ -1,118 +1,196 @@
 <section>
     <div class="card">
+        <div class="card-header">
+            <h3 class="heading">Thực hiện các bước tạo đơn hàng</h3>
+            <p class="font-italic text-warning">
+                Điền vào tất cả trường biểu mẫu để chuyển sang bước tiếp theo
+            </p>
+        </div>
         <div class="card-body">
-            <h2 class="heading">Thực hiện các bước tạo đơn hàng</h2>
-            <p>Điền vào tất cả trường biểu mẫu để chuyển sang bước tiếp theo</p>
-            <form id="msform">
-                <!-- progressbar -->
-                <ul id="progressbar" class="p-0">
-                    <li class="active" id="account"><strong>Địa điểm</strong></li>
-                    <li id="personal"><strong>Thồng tin người nhận</strong></li>
-                    <li id="payment"><strong>Image</strong></li>
-                    <li id="confirm"><strong>Xác nhận đơn hàng</strong></li>
+            <div class="stepwizard w-100 d-flex flex-column position-relative">
+                <ul class="stepwizard-row setup-panel list-inline">
+                    <li class="stepwizard-step list-inline-item">
+                        <a href="#step-1" type="button" class="btn btn-success btn-circle">
+                            <i class=" fa fa-2x fas fa-map-marked"></i> </a>
+                        <p><small>Địa điểm lấy hàng</small></p>
+                    </li>
+                    <li class="stepwizard-step list-inline-item">
+                        <a href="#step-2" type="button" class="btn btn-info btn-circle" disabled="disabled">
+                            <i class="fa fa-2x fa-user-alt"></i>
+                        </a>
+                        <p><small>Thồng tin người nhận</small></p>
+                    </li>
+                    <li class="stepwizard-step list-inline-item">
+                        <a href="#step-3" type="button" class="btn btn-info btn-circle" disabled="disabled">3</a>
+                        <p><small>Schedule</small></p>
+                    </li>
+                    <li class="stepwizard-step list-inline-item">
+                        <a href="#step-4" type="button" class="btn btn-info btn-circle" disabled="disabled">4</a>
+                        <p><small>Cargo</small></p>
+                    </li>
                 </ul>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <form role="form" style="font-size: 0.875rem" class=" d-flex justify-content-center">
+                <div class=" card setup-content w-75" id="step-1">
+                    <div class="card-header bg-transparent">
+                        <h5 class=" card-title m-0">Địa điểm lấy hàng</h5>
+                    </div>
+                    <div class=" card-body">
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
+                                    <i style="width: 28px;" class="fa fa-truck mr-3 fa-2x"></i>
+                                    <span>Loại:</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-9 input-group">
+                                <select class="custom-select" required>
+                                    <option selected>Chọn kiểu lấy hàng</option>
+                                    <option>một</option>
+                                    <option>hai</option>
+                                </select>
+
+                                <!-- <div class="valid-feedback">Phù hợp !</div> -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
+                                    <i class="fa fas fa-location-arrow mr-3 fa-2x"></i>
+                                    <span>Địa chỉ:</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-9 input-group">
+                                <select class="custom-select" required>
+                                    <option selected>Chọn địa chỉ</option>
+                                    <option>một</option>
+                                    <option>hai</option>
+                                </select>
+
+                                <!-- <div class="valid-feedback">Phù hợp !</div> -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
+                                    <i class="fa fas fa-calendar mr-3 fa-2x"></i>
+                                    <span>Thời gian: </span>
+                                </label>
+                            </div>
+                            <div class="col-lg-9 input-group">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                    id="example-datetime-local-input" />
+
+                                <!-- <div class="valid-feedback">Phù hợp !</div> -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-3">
+                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
+                                    <i class="fa fas fa-calendar mr-3 fa-2x"></i><span>Số lượng bưu kiện:</span>
+                                </label>
+                            </div>
+                            <div class="col-lg-9 input-group">
+                                <button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+                                    data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    chọn loại xe phù hợp với bưu kiện
+                                </button>
+                                <div class="collapse w-100 mt-3" id="collapseExample">
+                                    <div class="card card-body">
+                                        <ul class="list-inline d-flex justify-content-around typeCar">
+                                            <li class="list-inline-item  shadow bg-white rounded">
+                                                <i class="fa fa-motorcycle fa-3x mb-1"></i>
+                                                <span>xe máy</span>
+                                            </li>
+                                            <li class="list-inline-item  shadow bg-white rounded">
+                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>cốp xe</span>
+                                            </li>
+                                            <li class="list-inline-item  shadow bg-white rounded">
+                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>bán tải</span>
+                                            </li>
+                                            <li class="list-inline-item  shadow bg-white rounded">
+                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>xe tải</span>
+                                            </li>
+                                            <li class="list-inline-item  shadow bg-white rounded">
+                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>nhiều xe tải</span>
+                                            </li>
+                                        </ul>
+                                        <style>
+                                            .typeCar li {
+                                                text-align: center;
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                padding: 20px;
+                                                width: 95px;
+                                                margin: 0 !important;
+                                                align-content: center;
+                                            }
+
+                                            .typeCar li span {
+                                                text-transform: capitalize;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class=" card-footer text-xl-right bg-transparent">
+                        <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
+                            Tiếp tục
+                        </button>
+                    </div>
                 </div>
-                <br />
-                <!-- fieldsets -->
-                <fieldset>
-                    <div class="form-card">
-                        <div class="row">
-                            <div class="col-7">
-                                <h2 class="fs-title">Account Information:</h2>
-                            </div>
-                            <div class="col-5">
-                                <h2 class="steps">Step 1 - 4</h2>
-                            </div>
-                        </div>
-                        <label class="fieldlabels">Email: *</label>
-                        <input type="email" name="email" placeholder="Email Id" />
-                        <label class="fieldlabels">Username: *</label>
-                        <input type="text" name="uname" placeholder="UserName" />
-                        <label class="fieldlabels">Password: *</label>
-                        <input type="password" name="pwd" placeholder="Password" />
-                        <label class="fieldlabels">Confirm Password: *</label>
-                        <input type="password" name="cpwd" placeholder="Confirm Password" />
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Next" />
-                </fieldset>
-                <fieldset>
-                    <div class="form-card">
-                        <div class="row">
-                            <div class="col-7">
-                                <h2 class="fs-title">Personal Information:</h2>
-                            </div>
-                            <div class="col-5">
-                                <h2 class="steps">Step 2 - 4</h2>
-                            </div>
-                        </div>
-                        <label class="fieldlabels">First Name: *</label>
-                        <input type="text" name="fname" placeholder="First Name" />
-                        <label class="fieldlabels">Last Name: *</label>
-                        <input type="text" name="lname" placeholder="Last Name" />
-                        <label class="fieldlabels">Contact No.: *</label>
-                        <input type="text" name="phno" placeholder="Contact No." />
-                        <label class="fieldlabels">Alternate Contact No.: *</label>
-                        <input type="text" name="phno_2" placeholder="Alternate Contact No." />
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Next" />
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                </fieldset>
-                <fieldset>
-                    <div class="form-card">
-                        <div class="row">
-                            <div class="col-7">
-                                <h2 class="fs-title">Image Upload:</h2>
-                            </div>
-                            <div class="col-5">
-                                <h2 class="steps">Step 3 - 4</h2>
-                            </div>
-                        </div>
-                        <label class="fieldlabels">Upload Your Photo:</label>
-                        <input type="file" name="pic" accept="image/*" />
-                        <label class="fieldlabels">Upload Signature Photo:</label>
-                        <input type="file" name="pic" accept="image/*" />
-                    </div>
-                    <input type="button" name="next" class="next action-button" value="Submit" />
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                </fieldset>
-                <fieldset>
-                    <div class="form-card">
-                        <div class="row">
-                            <div class="col-7">
-                                <h2 class="fs-title">Finish:</h2>
-                            </div>
-                            <div class="col-5">
-                                <h2 class="steps">Step 4 - 4</h2>
-                            </div>
-                        </div>
-                        <br /><br />
-                        <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2>
-                        <br />
-                        <div class="row justify-content-center">
-                            <div class="col-3"></div>
-                        </div>
-                        <br /><br />
-                        <div class="row justify-content-center">
-                            <div class="col-7 text-center">
-                                <h5 class="purple-text text-center">
-                                    You Have Successfully Signed Up
-                                </h5>
-                            </div>
+
+                <div class=" card" id="step-2">
+                    <div class=" card-header"></div>
+                    <div class=" card-body">
+                        <div class=" card-footer text-xl-right bg-transparent">
+                            <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
+                                Tiếp tục
+                            </button>
                         </div>
                     </div>
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
-                </fieldset>
+                </div>
+
+                <div class=" card" id="step-3">
+                    <div class=" card-header"></div>
+                    <div class=" card-body">
+                        <div class=" card-footer text-xl-right bg-transparent">
+                            <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
+                                Tiếp tục
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" card" id="step-4">
+                    <div class=" card-header"></div>
+                    <div class=" card-body">
+                        <div class=" card-footer text-xl-right bg-transparent">
+                            <button class="btn btn-success nextBtn pull-right btn-sm" type="submit">
+                                Tiếp tục
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </form>
         </div>
     </div>
 </section>
 
-<style class="style"></style>
+<style class="CreateOrder"></style>
 
 <script>
-    $(() => $(".style").load("./component/Main/CreateOrder/style.module.css"))
+    $(() =>
+        $(".CreateOrder").load("./component/Main/CreateOrder/style.module.css")
+    );
 </script>
 <script src="./component/Main/CreateOrder/script.module.js"></script>
