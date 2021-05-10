@@ -21,7 +21,7 @@
 }
 
 .stepwizard-row:before {
-  top: 25%;
+  top: 25px;
   bottom: 0;
   position: absolute;
   content: " ";
@@ -36,4 +36,34 @@
   height: 50px;
   text-align: center;
   border-radius: 50%;
+}
+
+/* BookingOrder  */
+
+#BookingOrder li {
+  display: flex;
+}
+
+#BookingOrder li .title {
+  width: 40%;
+}
+
+#BookingOrder li .value {
+  width: 60%;
+}
+
+/* typeCar */
+.typeCar li {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  width: 95px;
+  margin: 0 !important;
+  align-content: center;
+}
+
+.typeCar li span {
+  text-transform: capitalize;
 }

@@ -9,43 +9,47 @@
         <div class="card-body">
             <div class="stepwizard w-100 d-flex flex-column position-relative">
                 <ul class="stepwizard-row setup-panel list-inline">
-                    <li class="stepwizard-step list-inline-item">
+                    <li class="stepwizard-step list-inline-item m-0">
                         <a href="#step-1" type="button" class="btn btn-success btn-circle">
-                            <i class=" fa fa-2x fas fa-map-marked"></i> </a>
-                        <p><small>Địa điểm lấy hàng</small></p>
-                    </li>
-                    <li class="stepwizard-step list-inline-item">
-                        <a href="#step-2" type="button" class="btn btn-info btn-circle" disabled="disabled">
-                            <i class="fa fa-2x fa-user-alt"></i>
+                            <i class="fa fas fa-map-marked"></i>
                         </a>
-                        <p><small>Thồng tin người nhận</small></p>
+                        <p class="d-none d-md-block"><small>Địa điểm lấy hàng</small></p>
                     </li>
-                    <li class="stepwizard-step list-inline-item">
-                        <a href="#step-3" type="button" class="btn btn-info btn-circle" disabled="disabled">3</a>
-                        <p><small>Schedule</small></p>
+                    <li class="stepwizard-step list-inline-item m-0">
+                        <a href="#step-2" type="button" class="btn btn-info btn-circle" disabled="disabled">
+                            <i class="fa fa-user-alt"></i>
+                        </a>
+                        <p class="d-none d-md-block"><small>Thồng tin người nhận</small></p>
                     </li>
-                    <li class="stepwizard-step list-inline-item">
-                        <a href="#step-4" type="button" class="btn btn-info btn-circle" disabled="disabled">4</a>
-                        <p><small>Cargo</small></p>
+                    <li class="stepwizard-step list-inline-item m-0">
+                        <a href="#step-3" type="button" class="btn btn-info btn-circle" disabled="disabled"><i
+                                class="fa fa-wallet"></i></a>
+                        <p class="d-none d-md-block"><small>Tổng tiền thu</small></p>
+                    </li>
+                    <li class="stepwizard-step list-inline-item m-0">
+                        <a href="#step-4" type="button" class="btn btn-info btn-circle" disabled="disabled"><i
+                                class="fa fa-check"></i></a>
+                        <p class="d-none d-md-block"><small>Xác nhận</small></p>
                     </li>
                 </ul>
             </div>
 
-            <form role="form" style="font-size: 0.875rem" class=" d-flex justify-content-center">
-                <div class=" card setup-content w-75" id="step-1">
-                    <div class="card-header bg-transparent">
-                        <h5 class=" card-title m-0">Địa điểm lấy hàng</h5>
+            <form role="form" style="font-size: 0.875rem" class="d-flex justify-content-center width-100">
+                <!-- form ở bước 1 -->
+                <div class="card setup-content w-100" id="step-1">
+                    <div class="card-header">
+                        Địa điểm lấy hàng
                     </div>
-                    <div class=" card-body">
+                    <div class="card-body">
                         <div class="form-group row">
-                            <div class="col-md-3">
-                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
-                                    <i style="width: 28px;" class="fa fa-truck mr-3 fa-2x"></i>
+                            <div class="col-lg-3">
+                                <label class="control-label font-weight-bold d-flex align-items-center">
+                                    <i class="fa fa-truck mr-3"></i>
                                     <span>Loại:</span>
                                 </label>
                             </div>
                             <div class="col-lg-9 input-group">
-                                <select class="custom-select" required>
+                                <select class="custom-select custom-select-sm" required>
                                     <option selected>Chọn kiểu lấy hàng</option>
                                     <option>một</option>
                                     <option>hai</option>
@@ -55,14 +59,14 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-md-3">
-                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
-                                    <i class="fa fas fa-location-arrow mr-3 fa-2x"></i>
+                            <div class="col-lg-3">
+                                <label class="control-label fw-bold d-flex align-items-center">
+                                    <i class="fa fas fa-location-arrow mr-3"></i>
                                     <span>Địa chỉ:</span>
                                 </label>
                             </div>
                             <div class="col-lg-9 input-group">
-                                <select class="custom-select" required>
+                                <select class="custom-select custom-select-sm" required>
                                     <option selected>Chọn địa chỉ</option>
                                     <option>một</option>
                                     <option>hai</option>
@@ -72,115 +76,459 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-md-3">
-                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
-                                    <i class="fa fas fa-calendar mr-3 fa-2x"></i>
+                            <div class="col-lg-3">
+                                <label class="control-label fw-bold d-flex align-items-center">
+                                    <i class="fa fas fa-calendar mr-3"></i>
                                     <span>Thời gian: </span>
                                 </label>
                             </div>
                             <div class="col-lg-9 input-group">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
-                                    id="example-datetime-local-input" />
+                                <input class="form-control form-control-sm" type="datetime-local"
+                                    value="2011-08-19T13:45:00" id="example-datetime-local-input" />
 
                                 <!-- <div class="valid-feedback">Phù hợp !</div> -->
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-md-3">
-                                <label class="control-label text-uppercase font-weight-bold d-flex align-items-center">
-                                    <i class="fa fas fa-calendar mr-3 fa-2x"></i><span>Số lượng bưu kiện:</span>
+                            <div class="col-lg-3">
+                                <label class="control-label fw-bold d-flex align-items-center">
+                                    <i class="fa fas fa-calendar mr-3"></i><span>Số lượng bưu kiện:</span>
                                 </label>
                             </div>
                             <div class="col-lg-9 input-group">
-                                <button class="btn btn-outline-primary" type="button" data-toggle="collapse"
-                                    data-target="#collapseExample" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                    chọn loại xe phù hợp với bưu kiện
-                                </button>
-                                <div class="collapse w-100 mt-3" id="collapseExample">
+                                <div>
+                                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#loaiXe" aria-expanded="false" aria-controls="loaiXe">
+                                        Chọn loại xe phù hợp bưu kiện
+                                    </button>
+                                </div>
+                                <div class="collapse w-100 mt-3" id="loaiXe">
                                     <div class="card card-body">
-                                        <ul class="list-inline d-flex justify-content-around typeCar">
-                                            <li class="list-inline-item  shadow bg-white rounded">
-                                                <i class="fa fa-motorcycle fa-3x mb-1"></i>
-                                                <span>xe máy</span>
+                                        <ul class="list-inline d-flex flex-wrap justify-content-around">
+                                            <li class="list-inline-item shadow bg-white rounded mb-2">
+                                                <span class="d-flex flex-column align-items-center p-4">
+                                                    <i class="fa fa-motorcycle mb-1"></i>xe máy</span>
                                             </li>
-                                            <li class="list-inline-item  shadow bg-white rounded">
-                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>cốp xe</span>
+                                            <li class="list-inline-item shadow bg-white rounded mb-2">
+                                                <span class="d-flex flex-column align-items-center p-4">
+                                                    <i class="fa fa-motorcycle mb-1"></i>cốp xe</span>
                                             </li>
-                                            <li class="list-inline-item  shadow bg-white rounded">
-                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>bán tải</span>
+                                            <li class="list-inline-item shadow bg-white rounded mb-2">
+                                                <span class="d-flex flex-column align-items-center p-4">
+                                                    <i class="fa fa-motorcycle mb-1"></i>bán tải</span>
                                             </li>
-                                            <li class="list-inline-item  shadow bg-white rounded">
-                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>xe tải</span>
+                                            <li class="list-inline-item shadow bg-white rounded mb-2">
+                                                <span class="d-flex flex-column align-items-center p-4">
+                                                    <i class="fa fa-motorcycle mb-1"></i>xe tải</span>
                                             </li>
-                                            <li class="list-inline-item  shadow bg-white rounded">
-                                                <i class="fa fa-motorcycle fa-3x mb-1"></i><span>nhiều xe tải</span>
+                                            <li class="list-inline-item shadow bg-white rounded mb-2">
+                                                <span class="d-flex flex-column align-items-center p-4">
+                                                    <i class="fa fa-motorcycle mb-1"></i>nhiều xe
+                                                </span>
                                             </li>
                                         </ul>
-                                        <style>
-                                            .typeCar li {
-                                                text-align: center;
-                                                display: flex;
-                                                flex-direction: column;
-                                                justify-content: center;
-                                                padding: 20px;
-                                                width: 95px;
-                                                margin: 0 !important;
-                                                align-content: center;
-                                            }
-
-                                            .typeCar li span {
-                                                text-transform: capitalize;
-                                            }
-                                        </style>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class=" card-footer text-xl-right bg-transparent">
+                    <div class="card-footer text-xl-right bg-transparent">
                         <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
                             Tiếp tục
                         </button>
                     </div>
                 </div>
 
-                <div class=" card setup-content" id="step-2">
-                    <div class=" card-header"></div>
-                    <div class=" card-body">
-                        <div class=" card-footer text-xl-right bg-transparent">
-                            <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
-                                Tiếp tục
+                <!-- form ở bước 2 -->
+                <div class="card setup-content w-100" id="step-2">
+                    <div class="card-header">Thông tin mã vận đơn</div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-numbered">
+                            <li data-bs-toggle="collapse" data-bs-target="#MaVanDon1" aria-expanded="false"
+                                aria-controls="MaVanDon1"
+                                class="list-group-item d-flex justify-content-between align-items-start list-group-item-action mb-2 border rounded">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Đơn hàng: <span>TV09834f737h</span></div>
+                                    <span>Lý Kiều Diễm - 19/07/2021, 21h00 - 450.000.000 vnd</span>
+                                </div>
+                                <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle"></i>
+                                </span>
+                            </li>
+
+                            <!-- collapse hiên thị cho item 1 -->
+                            <div class="collapse mb-3 card" id="MaVanDon1">
+                                <div class="card-body">
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Mã vận đơn:</label>
+                                            <input name="" class="form-control form-control-sm" type=""
+                                                value="TV09834f737h" disabled />
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Vật phẩm nguy hiểm:</label>
+                                            <div class="mt-1">
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Không
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked />
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Có
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Tên khách hàng:</label>
+                                            <input name="" class="form-control form-control-sm" type=""
+                                                placeholder="Tên khách hàng" autofocus required />
+                                            <div class="small text-danger d-none">
+                                                <em>Không đúng định dạng !</em>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Hình thức vận chuyển:</label>
+                                            <div class="mt-1">
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Giao hàng nhanh 6 tiếng
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked />
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Giao hàng nhanh 12 tiếng
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Số điện thoại:</label>
+                                            <input name="" class="form-control form-control-sm" type=""
+                                                placeholder="Số điện thoại" autofocus required />
+                                            <div class="small text-danger d-none">
+                                                <em>Không đúng định dạng !</em>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Kích thước:</label>
+                                            <div class="mt-1">
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        1
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked />
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        2
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        3
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked />
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        4
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Giá trị đơn hàng:</label>
+
+                                            <input name="" class="form-control form-control-sm" type=""
+                                                placeholder="Giá trị đơn hàng" autofocus required />
+                                            <div class="small text-danger d-none">
+                                                <em>Không đúng định dạng !</em>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Chỉ dẫn không phát được vật
+                                                phẩm:</label>
+                                            <div class="mt-1">
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Hoàn trả
+                                                    </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2" checked />
+                                                    <label class="form-check-label" for="flexRadioDefault2">
+                                                        Hủy
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row justify-content-center">
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Địa chỉ:</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="2"></textarea>
+                                            <div class="small text-danger d-none">
+                                                <em>Không đúng định dạng !</em>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="form-control-label mb-0">Mô tả bưu kiện:</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="2"></textarea>
+                                            <div class="small text-danger d-none">
+                                                <em>Không đúng định dạng !</em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-transparent text-right border-0">
+                                    <div class="d-inline-block">
+                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#XoaMaVanDon1">
+                                            Xóa đơn
+                                        </button>
+                                        <button type="button" class="btn btn-success btn-sm">
+                                            Lưu lại
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Modal xóa mã vận đơn -->
+                                <div class="modal fade" id="XoaMaVanDon1" tabindex="-1"
+                                    aria-labelledby="XoaMaVanDon1Label" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="XoaMaVanDon1Label">
+                                                    Cảnh Báo
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="text-danger">
+                                                    Bạn đang xóa mã vận đơn: TV09834f737h
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger">
+                                                    Xóa
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-start list-group-item-action mb-2 border rounded">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Đơn hàng: <span>TV09834f737h</span></div>
+                                    <span>Phạm Từ Chu - 11/07/2021, 21h00 - 40.000.000 vnd</span>
+                                </div>
+                                <span class="badge bg-success rounded-pill"><i class="fa fa-check-circle"></i>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div>
+                            <button class="btn btn-outline-info">
+                                Thêm đơn hàng mới <i class="fa fa-plus ml-2"></i>
                             </button>
                         </div>
                     </div>
-                </div>
-
-                <div class=" card setup-content" id="step-3">
-                    <div class=" card-header"></div>
-                    <div class=" card-body">
-                        <div class=" card-footer text-xl-right bg-transparent">
-                            <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
-                                Tiếp tục
-                            </button>
-                        </div>
+                    <div class="card-footer text-xl-right bg-transparent">
+                        <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
+                            Tiếp tục
+                        </button>
                     </div>
                 </div>
 
-                <div class=" card setup-content" id="step-4">
-                    <div class=" card-header"></div>
-                    <div class=" card-body">
-                        <div class=" card-footer text-xl-right bg-transparent">
-                            <button class="btn btn-success nextBtn pull-right btn-sm" type="submit">
-                                Tiếp tục
-                            </button>
+                <div class="card setup-content w-100" id="step-3">
+                    <!-- <div class="card-header">Chọn địa điểm và Tổng tiền thu</div> -->
+                    <div class="card-body">
+                        <div class="card text-center mb-3 ">
+                            <div class="card-header">Chọn địa điểm</div>
+                            <div class="card-body">
+                                <div class="text-left">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1" />
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Địa chỉ 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked />
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Địa chỉ 2
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="card text-center">
+                            <div class="card-header">Tổng tiền thu: 300.000 (VND)</div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="d-block font-weight-bold">Giá trị COD </span>
+                                            <small class="font-italic">(VND)</small>
+                                        </div>
+
+                                        <div>
+                                            <span class="d-block">300.000 (đ)</span>
+                                            <small class="font-italic">Ba trăm ngìn đồng</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="d-block font-weight-bold">Cước giao hàng
+                                            </span>
+                                            <small class="font-italic">(VND)</small>
+                                        </div>
+
+                                        <div>
+                                            <span class="d-block">300.000 (đ)</span>
+                                            <small class="font-italic">Ba trăm ngìn đồng</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="d-block font-weight-bold">Cước liên tỉnh
+                                            </span>
+                                            <small class="font-italic">(VND)</small>
+                                        </div>
+
+                                        <div>
+                                            <span class="d-block">300.000 (đ)</span>
+                                            <small class="font-italic">Ba trăm ngìn đồng</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="d-block font-weight-bold">Người trả cước phí</span>
+                                            <small class="font-italic">(VND)</small>
+                                        </div>
+
+                                        <div class=" text-left">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1" />
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Người gửi
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2" checked />
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Người nhận
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-xl-right bg-transparent">
+                        <button class="btn btn-primary nextBtn pull-right btn-sm" type="button">
+                            Tiếp tục
+                        </button>
                     </div>
                 </div>
 
+                <div class="card setup-content w-100 border-0 p-0  " id="step-4">
+                    <!-- <div class="card-header">Xác nhận thông tin đơn hàng</div> -->
+                    <div class="card-body d-flex align-items-center justify-content-center p-0">
 
+                        <div style="width: 500px; margin: 0 -20px;" class="card min-vh-100">
+                            <div class="card-header d-inline">
+                                <div class="row">
+                                    <div class=" col-lg-5 ">
+                                        <img class="img-fluid logo-chanh" src="./img/Chanh-logo.png" />
+                                    </div>
+                                    <div class="col-lg-7 text-center">
+                                        <h5 class=" text-warning">Dịch vụ vận chuyển</h5>
+                                        <h2 class=" text-success fw-bold">Chanh8 SI coop.</h2>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                                <div class=" text-center">
+                                    <h3 class="fw-bold">Thông tin đơn hàng</h3>
+                                    <p>Mã vận đơn: TV09834f737h</p>
+                                </div>
+                                <div>
+                                    <h6 class=" fw-bold">Thông tin người gửi</h6>
+                                    <ul class=" list-unstyled  " id='BookingOrder'>
+                                        <li class=" ">
+                                            <span class=" title">Họ tên:</span>
+                                            <span class=" value">Đỗ Hửu Huy</span>
+                                        </li>
+                                    </ul>
+                                    <h6 class=" fw-bold">Thông tin người nhận</h6>
+                                    <ul class=" list-unstyled  " id='BookingOrder'>
+                                        <li class=" ">
+                                            <span class=" title">Họ tên:</span>
+                                            <span class=" value">Lý Di Linh</span>
+                                        </li>
+                                    </ul>
+                                    <h6 class=" fw-bold">Phí dịch vụ</h6>
+                                    <ul class=" list-unstyled  " id='BookingOrder'>
+                                        <li class=" ">
+                                            <span class=" title">Giá cước COD:</span>
+                                            <span class=" value">300.000 (đ)</span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                            <div class=" card-footer">
+                                <button class="btn btn-success nextBtn pull-right btn-sm btn-block" type="submit">
+                                    Xác nhận
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </form>
         </div>
     </div>
