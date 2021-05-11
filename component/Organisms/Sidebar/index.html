@@ -69,10 +69,26 @@
     </div>
 </ul>
 
-<style id="Sidebar"></style>
+<style id="Sidebar">
+    .create-order {
+        display: flex;
+        justify-content: center;
+    }
+
+    .create-order a {
+        width: 80% !important;
+        border: 1px solid snow;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+    }
+
+    .accordionSidebar>a {
+        color: aliceblue !important;
+    }
+</style>
 
 <script src="./js/admin.js"></script>
 <script src="./js/admin.min.js"></script>
-<script>
-    $(() => $("#Sidebar").load("./component/Organisms/Sidebar/style.module.css"));
-</script>

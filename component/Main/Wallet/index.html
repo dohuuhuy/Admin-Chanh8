@@ -1,0 +1,263 @@
+<section>
+    <div>
+        <div class="card text-center mb-3">
+            <div class="card-body">
+                <h3 class="text-left">Số dư tài khoản</h3>
+                <div class="d-flex justify-content-between">
+                    <div class="d-inline">
+                        <a type="button" class="rounded-circle"><i class="fa fa-2x fa-wallet p-2"></i></a>
+
+                        <span>300.000.000 (đ)</span>
+                    </div>
+
+                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#requestWallet">
+                        Yêu cầu rút tiền
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="requestWallet" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="requestWalletLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger">Yêu cầu rút tiền</h5>
+
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group text-left">
+                                            <label class="form-control-label mb-0 fs-5 w-100 text-center mb-2 fw-bold">
+                                                <i class=" far fa-credit-card text-warning  mr-1"></i> Tài khoản
+                                                ngân
+                                                hàng:</label>
+                                            <ul class="text-left">
+                                                <li class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        <span class="d-block fw-bold">BIDV, 131243vce89434</span>
+                                                        <small>Liễu Hàn Khoa</small>
+                                                    </label>
+                                                </li>
+                                                <li class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1" />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        <span class="d-block fw-bold">VietinBank, 131243vce89434</span>
+                                                        <small>Tiêu Mân La</small>
+                                                    </label>
+                                                </li>
+
+                                                <li class="form-check mb-2">
+                                                    <div class="label">
+                                                        <input class="form-check-input d-block" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault2" checked />
+                                                        <label class="form-check-label fw-bold text-warning"
+                                                            for="flexRadioDefault2">
+                                                            Nhập thông tin tài khoản mới
+                                                        </label>
+                                                    </div>
+                                                    <div class="form p-2 mt-2 border border-1 rounded-2">
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label class="form-control-label mb-0">Tên ngân
+                                                                    hàng:</label>
+                                                                <input name="" class="form-control form-control-sm"
+                                                                    type="" placeholder="Tên ngân hàng" autofocus
+                                                                    required />
+                                                                <div class="small text-danger d-none">
+                                                                    <em>Không đúng định dạng !</em>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label class="form-control-label mb-0">Số tài
+                                                                    khoản:</label>
+                                                                <input name="" class="form-control form-control-sm"
+                                                                    type="" placeholder="Số tài khoản" autofocus
+                                                                    required />
+                                                                <div class="small text-danger d-none">
+                                                                    <em>Không đúng định dạng !</em>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-12">
+                                                                <label class="form-control-label mb-0">Tên khách
+                                                                    hàng:</label>
+                                                                <input name="" class="form-control form-control-sm"
+                                                                    type="" placeholder="Tên ngân hàng" autofocus
+                                                                    required />
+                                                                <div class="small text-danger d-none">
+                                                                    <em>Không đúng định dạng !</em>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <button type="button" class="btn btn-danger btn-sm">
+                                                                <i class="fas fa-trash"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-success btn-sm">
+                                                                <i class="fa fa-save"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <div class="text-center mt-2">
+                                                    <button type="button" class="btn btn-outline-info btn-sm">
+                                                        Thêm tài khoản mới
+                                                        <i class="fa fas fa-plus ml-1"></i>
+                                                    </button>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form-row d-flex ">
+                                        <label class="form-control-label mb-0 fs-5 w-100 text-center mb-2 fw-bold"> <i
+                                                class=" far fa-money-bill-alt text-warning  mr-1"></i> Rút tài
+                                            khoản:</label>
+                                        <div class="form-group form-inline col-md-12 text-left justify-content-around">
+                                            <label class="form-control-label mb-0 fw-bold "><i
+                                                    class=" fas fa-user-plus mr-1"></i>Số tiền cần rút:</label>
+                                            <input name="" class="form-control form-control-sm input-group" type=""
+                                                placeholder="Tối thiểu 50.000 (đ)" autofocus required />
+
+                                        </div>
+                                        <div class="form-group  form-inline col-md-12 text-left justify-content-around">
+                                            <label class="form-control-label fw-bold mb-0"><i
+                                                    class=" fa fas fa-money-bill mr-1"></i> Số dư tài
+                                                khoản:</label>
+                                            <input name="" class="form-control form-control-sm" type=""
+                                                value="200.000.000 (đ)" disabled />
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                                <div class="px-2">
+                                    <h5 class="m-0">Xác minh điện thoại di động</h5>
+                                    <span class="mobile-text">
+                                        Nhập mã chúng tôi vừa gửi trên điện thoại di động của bạn 
+                                        <p class="text-danger">+91 86684833</p>
+                                    </span>
+                                    <div class="d-flex flex-row mt-2 justify-content-center">
+                                        <input type="number" class="form-control mx-1 text-center" pattern="\d*"
+                                            maxlength="1" min="0" max="9" autofocus="" />
+                                        <input type="number" pattern="\d*" maxlength="1" min="0" max="9"
+                                            class="form-control mx-1 text-center" />
+                                        <input type="number" pattern="\d*" maxlength="1" min="0" max="9"
+                                            class="form-control mx-1 text-center" />
+                                        <input type="number" pattern="\d*" maxlength="1" min="0" max="9"
+                                            class="form-control mx-1 text-center" />
+                                        <input type="number" pattern="\d*" maxlength="1" min="0" max="9"
+                                            class="form-control mx-1 text-center" />
+                                        <input type="number" pattern="\d*" maxlength="1" min="0" max="9"
+                                            class="form-control mx-1 text-center" />
+                                    </div>
+                                    <div class="text-center mt-2">
+                                        <span class="d-block mobile-text">Không nhận được mã?</span><span
+                                            class="font-weight-bold text-danger cursor">Gửi lại</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success btn-sm">
+                                    Rút tiền
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                                    Đóng
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card text-center mb-3">
+            <div class="card-body">
+                <div class="text-left">
+                    <button type="button" class="btn btn-dark">Rút tiền</button>
+
+                    <button type="button" class="btn btn-outline-dark">
+                        Các câu lệnh
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card text-center">
+            <div class="card-header d-flex justify-content-between bg-transparent">
+                <h5>Lịch sử gần đây</h5>
+                <a class="text-dark btn btn-light btn-sm small fst-italic">Xem chi tiết <i
+                        class="fa fa-chevron-right ml-1"></i></a>
+            </div>
+            <div class="card-body text-left">
+                <ul class="list-group">
+                    <li class="list-group-item mb-2 rounded-0 border-0 border-bottom-info">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="title mb-0 fw-bold">Rút tiền COD</p>
+                                <p class="mb-0">
+                                    <em class="small mr-3">20/10/2010, 4:19</em>
+                                    <span class="fw-bold fs-6">Pending</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <p class="mb-0">
+                                    <span class="fw-bold">+ đ</span> <span>1.051.000</span>
+                                </p>
+                                <span class="badge bg-warning px-3 py-2 d-block mt-1">Đang đợi</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item mb-2 rounded-0 border-0 border-bottom-info">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="title mb-0 fw-bold">Rút tiền COD</p>
+                                <p class="mb-0">
+                                    <em class="small mr-3">20/10/2010, 4:19</em>
+                                    <span class="fw-bold fs-6">Pending</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <p class="mb-0">
+                                    <span class="fw-bold">+ đ</span> <span>1.051.000</span>
+                                </p>
+                                <span class="badge bg-success px-3 py-2 d-block mt-1">Thành công</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item mb-2 rounded-0 border-0 border-bottom-info">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="title mb-0 fw-bold">Rút tiền COD</p>
+                                <p class="mb-0">
+                                    <em class="small mr-3">20/10/2010, 4:19</em>
+                                    <span class="fw-bold fs-6">Pending</span>
+                                </p>
+                            </div>
+                            <div class="text-left">
+                                <p class="mb-0">
+                                    <span class="fw-bold">+ đ</span> <span>1.051.000</span>
+                                </p>
+                                <span class="badge bg-danger px-3 py-2 d-block mt-1">Thất bại</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style class="Wallet"></style>
+
+<script>
+    $(() => $(".Wallet").load("./component/Main/Wallet/style.module.css"));
+</script>
+<script src="./component/Main/Wallet/script.module.js"></script>
